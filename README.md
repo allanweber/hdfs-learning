@@ -127,3 +127,19 @@ It will return some job ids:`Job job_1589362481488_0001`, check it at [http://lo
 ### Java Project Dependencies
 
 <img src="./img/7.png">
+
+* Copy the jar to the Hadoop Directory: `cp <path to jar>.jar .`
+* Create a set of directories do handle the input and output files: 
+
+    ```bash
+    hadoop fs -mkdir /mapreduce
+    ...
+    hadoop fs -mkdir /mapreduce/input
+    ```
+
+* Copy some files to execute the sample: `hadoop fs -put etc/hadoop/* /mapreduce/input`
+* Submit the map reduce jar: `hadoop jar map-reduce-sample.jar /mapreduce/input /mapreduce/output`
+  * Output path must be a **non-existent** directory, always.
+  * If META-INF error, delete this file: `zip -d map-reduce-sample.jar META-INF/LICENSE`
+
+* Copy the results locally to analyse the results: `hadoop fs -get /mapreduce/output/* output/`
