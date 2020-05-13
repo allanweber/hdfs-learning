@@ -125,5 +125,3 @@ It will return some job ids:`Job job_1589362481488_0001`, check it at [http://lo
 <img src="./img/6.png">
 
 ### Java Project Dependencies
-
-<img src="./img/7.png">
