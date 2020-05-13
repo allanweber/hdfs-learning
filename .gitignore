@@ -37,3 +37,6 @@ spring-*/src/main/java/META-INF/MANIFEST.MF
 *.iws
 .idea
 out
+
+META-INF/
+map-reduce-sample.jar
